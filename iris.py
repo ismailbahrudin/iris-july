@@ -28,7 +28,6 @@ st.write(df)
 
 iris = pd.read_csv('https://raw.githubusercontent.com/ismailbahrudin/iris-july/main/IRIS.csv')
 X = iris.drop('species',axis = 1)
-
 Y = iris['species']
 
 
@@ -39,7 +38,8 @@ prediction = clf.predict(df)
 prediction_proba = clf.predict_proba(df)
 
 st.subheader('Class labels and their corresponding index number')
-st.write(['Iris-setosa','Iris-versicolor','Iris-virginica'])
+df= pd.DataFrame(['Iris-setosa','Iris-versicolor','Iris-virginica'])
+st.write(df)
 
 st.subheader('Prediction')
 #st.write(iris.target_names[prediction])
